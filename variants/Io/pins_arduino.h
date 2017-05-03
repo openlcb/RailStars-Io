@@ -63,7 +63,7 @@ static const uint8_t A6 = 46;
 static const uint8_t A7 = 47;
 
 //PC interrupts are not available on the AT90CAN128
-#define digitalPinToPCICR(p)    ((uint8_t *)0)
+#define digitalPinToPCICR(p)    (0)
 #define digitalPinToPCICRbit(p) (1)
 #define digitalPinToPCMSK(p)    ((uint8_t *)0)
 #define digitalPinToPCMSKbit(p) (p)
