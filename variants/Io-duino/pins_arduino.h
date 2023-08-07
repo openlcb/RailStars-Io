@@ -27,6 +27,12 @@
 
 #include <avr/pgmspace.h>
 
+// Fix for Tone.cpp timer errors
+#if defined(__AVR_AT90CAN128__)
+#define TCCR2B TCCR2A
+#define TIMER2_COMPA_vect TIMER2_COMP_vect
+#endif
+
 #ifndef PCICR
 #define PCICE EICR
 #endif
